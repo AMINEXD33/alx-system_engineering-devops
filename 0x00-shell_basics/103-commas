@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lan --format=commas  --classify=auto
+s -la --format=commas  --classify=always 
