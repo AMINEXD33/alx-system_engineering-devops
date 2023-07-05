@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | grep -G '^[A-Z].*.html' | xargs -I{} mv {} ../
+ls | grep -G '^[A-Z].*' | xargs -I{} mv {} ../
