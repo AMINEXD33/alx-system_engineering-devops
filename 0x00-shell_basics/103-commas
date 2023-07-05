@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | sed -z 's/\n/, /g; s/\([^\/]\)$/&,/; s/\//\//g' 
+ls -lap --format=commas | sort -n 
