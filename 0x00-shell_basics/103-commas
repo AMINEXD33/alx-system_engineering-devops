@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lan --format=commas -m
+ls -lan --format=commas  --classify=yes
