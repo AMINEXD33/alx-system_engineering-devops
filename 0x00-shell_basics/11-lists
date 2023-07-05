@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lan $(pwd) $(dirname $(pwd)) /boot
+ls -lanU  $(pwd) $(dirname $(pwd)) "/boot"
