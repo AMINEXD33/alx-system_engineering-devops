@@ -1,2 +1,2 @@
 #!/bin/bash
-ls|grep *~ | xargs -I {} rm {} 
+ls|grep -G '~$' | xargs -I {} rm {} 
