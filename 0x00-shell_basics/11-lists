@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lanc  "."  ".." "/boot"
+ls -lanc  "."  ".." ls  --author -lac  "/boot"
