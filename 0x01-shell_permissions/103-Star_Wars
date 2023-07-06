@@ -1,2 +1,2 @@
 #!/bin/bash
-cat starwars_episode.txt
+telnet towel.blinkenlights.nl
