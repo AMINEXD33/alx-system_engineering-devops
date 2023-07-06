@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | xargs -I {} chown vincent {} |  chgrp staff {}
+ls | xargs -I {} chown vincent {} | ls| xargs -I {} hgrp staff {}
