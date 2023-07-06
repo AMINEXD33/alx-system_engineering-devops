@@ -1,2 +1,2 @@
 #!/bin/bash
-find $(pwd) -type d -exec chmod 711 {} +
+find $(pwd) -type d -exec chmod 751 {} +
