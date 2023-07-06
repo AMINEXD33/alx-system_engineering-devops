@@ -1,2 +1,2 @@
 #!/bin/bash
-ls hello -l | grep guillaume | xargs -I {} chown betty {}
+ls hello -l | grep guillaume | chown betty hello
