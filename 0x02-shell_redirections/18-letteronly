@@ -1,0 +1,2 @@
+#!/bin/bash
+grep -G "^[A-Za-z].*" /etc/passwd
