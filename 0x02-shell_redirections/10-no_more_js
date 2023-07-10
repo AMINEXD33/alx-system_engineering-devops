@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -p | grep -v / | grep -F .js | xargs -I {} rm -r {} 
+find . -type f | grep -F .js | xargs -I {} rm -rf {} 
