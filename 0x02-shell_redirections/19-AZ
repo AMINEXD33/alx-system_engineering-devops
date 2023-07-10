@@ -1,2 +1,2 @@
 #!/bin/bash
-replace A Z | replace c e
+tr 'Ac' 'Ze'
