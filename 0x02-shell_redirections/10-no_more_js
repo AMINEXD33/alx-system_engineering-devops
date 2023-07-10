@@ -1,2 +1,2 @@
 #!/bin/bash
-find $(pwd) -type f | grep -F ".js" | xargs -I {} rm -r {}
+ls -p | grep -v / | grep -F .js | xargs -I {} rm -r {} 
