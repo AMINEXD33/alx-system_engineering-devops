@@ -1,2 +1,2 @@
 #!/bin/bash
- ls  --sort=time  | head -n10 |tac|nl|tac
+ ls -lt | head -n 11
