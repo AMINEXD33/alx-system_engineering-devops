@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "print(round(float($NUM),2))"|python3
+echo "%.2f $NUM"
