@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%.2f" "$NUM""\n"
+exargs -I{} printf "%.2f" "{}"
