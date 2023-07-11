@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{a..z} | replace "oo" ""   
+echo {a..z}{a..z} | replace "oo" "" |sort | tr " " "\n"
