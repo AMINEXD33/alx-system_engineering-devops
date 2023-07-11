@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e $(printf "%.2f" "$NUM")'\n'
+echo -e $(printf "%.2f" "$NUM")
