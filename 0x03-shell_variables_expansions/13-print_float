@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'print(("{:.2f}".format($NUM)))'| python
+printf "%.2f" "$NUM"
