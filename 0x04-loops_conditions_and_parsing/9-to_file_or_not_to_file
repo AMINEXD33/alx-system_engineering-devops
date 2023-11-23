@@ -2,7 +2,7 @@
 # check if a file exists or not, empty or not etc...
 
 # take the file name, passed by the user as an arg
-filename=$1
+filename="school"
 
 
 if [ -e "$filename" ]
