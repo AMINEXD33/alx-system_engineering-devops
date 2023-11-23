@@ -3,9 +3,10 @@
 ((a=0))
 while ((a < 10))
 do 
-	if ((a == 8))
+	if ((a == 9))
 	then 
 		echo "Hi"
+		echo "Best School"
 	else
 		echo "Best School"
 	fi
