@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # this bash script prints x10 "Best School" using a while loop
 
-let "a=0"
-while (($a<10))
+((a=0))
+while ((a<10))
 do
 	echo "Best School"
-	let "a++"
+	((a++))
 done
