@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# this code uses the then loop to print x10 "Best School"
+
+((a=0))
+until [ $a = 10 ]
+do
+	echo "Best School"
+	((a++))
+done
