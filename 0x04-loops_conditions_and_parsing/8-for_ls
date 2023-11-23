@@ -8,5 +8,5 @@
 var=$(ls)
 for x in $var
 do
-	echo "$x"
+	echo "$x" | cut -d '-' -f2
 done
