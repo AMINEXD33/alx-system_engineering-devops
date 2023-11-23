@@ -6,7 +6,7 @@
 ((hours=0))
 ((minutes=1))
 #print the hour zero
-echo "Hour:$hours"
+echo "Hour: $hours"
 while ((hours <= 12))
 do
 	#if minutes equal to 59
@@ -19,7 +19,7 @@ do
 		#print the hour only if it's smaller or equal to 12
 		if ((hours <= 12))
 		then
-			echo "Hour:$hours"
+			echo "Hour: $hours"
 		fi
 	fi
 	#only if hours smaller or equal to 12
