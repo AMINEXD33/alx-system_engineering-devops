@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This code will display "bad luck" in the 4th iteration , "good luck in the 8th iteration", and "Best School for the other iterations"
+((x=0))
+while ((x < 10))
+do
+	if ((x == 4))
+	then 
+		echo "bad luck"
+	elif ((x == 8))
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	((x++))
+done
