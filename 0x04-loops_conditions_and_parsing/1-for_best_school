@@ -2,7 +2,7 @@
 
 # This script shows "Best school x10 times"
 
-for ((x=0;x<10;x++))
-	do 
+for (( x=0; x<10; x++ ))
+do 
 	echo "Best School"
-	done
+done
