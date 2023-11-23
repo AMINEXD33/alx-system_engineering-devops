@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This code print "Hi" if the itteration is 9 , otherwise it will print "Best School"
+((a=0))
+while ((a < 10))
+do 
+	if ((a == 8))
+	then 
+		echo "Hi"
+	else
+		echo "Best School"
+	fi
+	((a++))
+done
