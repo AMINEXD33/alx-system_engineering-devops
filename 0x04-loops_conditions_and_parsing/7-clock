@@ -10,7 +10,7 @@ echo "Hour:$hours"
 while ((hours <= 12))
 do
 	#if minutes equal to 59
-	if ((minutes == 59))
+	if ((minutes == 60))
 	then
 		#reset minutes
 		((minutes=1))
