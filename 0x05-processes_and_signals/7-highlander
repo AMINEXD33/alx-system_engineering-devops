@@ -5,9 +5,10 @@ function handle_SIGINT()
 	echo "I am invincible!!!"
 }
 
-trap 'handle_SIGINT' SIGINT
+trap 'handle_SIGINT' SIGTERM
 while ((1==1))
 do
 	echo "To infinity and beyond"
 	sleep 2
+
 done
