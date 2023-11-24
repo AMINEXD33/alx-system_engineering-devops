@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# get this bash script PID
+
+VarPID=$$
+echo "$VarPID"
