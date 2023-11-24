@@ -1,3 +1,4 @@
-##!/usr/bin/env bash
+#!/usr/bin/env bash
 # this bash script will show the process curentlly runing under bash
+# shellcheck disable=SC2059
 ps aux --forest | grep bash
