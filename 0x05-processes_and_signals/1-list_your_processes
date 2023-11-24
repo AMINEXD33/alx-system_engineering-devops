@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# this bash script will show the process curentlly runing
+ps -ua
