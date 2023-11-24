@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # make the 4-to_infinity_and_beyond bash script stop
-pkill -f 4-to_infinity_and_beyond
+pkill -f 4-to_infinity_and_beyond 
+
