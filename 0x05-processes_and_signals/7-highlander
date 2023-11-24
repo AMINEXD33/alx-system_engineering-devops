@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# this bash script will not terminate when ctrl+c instead it's going to be ennoying and print something
+function handle_SIGINT()
+{
+	echo "I am invincible!!!"
+}
+
+trap 'handle_SIGINT' SIGINT
+while ((1==1))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
