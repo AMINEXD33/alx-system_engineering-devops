@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# change the /etc/hosts file to fullfil the following >
+## facebook will be resolved to 8.8.8.8
+## 127.0.0.1 will be resolved to 127.0.0.2
+
+# make a copy of the hosts file
+cp /etc/hosts ~/hosts.new
+
+echo "8.8.8.8       facebook" > ~/hosts.new
+echo "127.0.0.2     localhost" >> ~/hosts.new
+
+
+# re copy the content of the new modified
+# -f is for forcing the change
+cp -f ~/hosts.new /etc/hosts
