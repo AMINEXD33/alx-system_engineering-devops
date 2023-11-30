@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# this bash script will get an ip as an argument
+# then it will send a packet 5 times , if no args
+# are passed then print the usage string
+
+# if the arg is not null
+if [ "$1" != : ]
+then
+	ping $1 -c5
+else
+	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
