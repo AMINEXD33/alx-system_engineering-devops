@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this code will display listining ports
+
+netstat -l
