@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+## bash script that listen on a port to some incoming connection to the port 98
+
+nc -nlvp 98
