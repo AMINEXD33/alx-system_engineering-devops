@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# for this task we'll get the ips -v4 of a machin
+# using some regex to filter out the result
+
+
+
+ip -4 addr show | grep "inet" | grep -oP "inet\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" | grep -oP "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
