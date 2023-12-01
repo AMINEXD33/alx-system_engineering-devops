@@ -6,10 +6,8 @@
 # make a copy of the hosts file
 cp /etc/hosts ~/hosts.new
 
-echo "8.8.8.8       facebook" > ~/hosts.new
-echo "127.0.0.2     localhost" >> ~/hosts.new
+# add the new ips to the copied files
+sed -i 's/127.*$/127.0.0.2 localhost\n8.8.8.8 facebook.com/' ~/hosts.new
 
-
-# re copy the content of the new modified
-# -f is for forcing the change
+# recopy to the /etc/hosts
 cp -f ~/hosts.new /etc/hosts
