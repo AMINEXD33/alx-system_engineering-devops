@@ -1,3 +1,4 @@
-Host *
-	passwordAuthentification no
-	IdentityFile ~/.ssh/school
+'Host *' => {
+      'passwordAuthentification' => 'no',
+      'IdentityFile'             => '~/.ssh/school'
+}
