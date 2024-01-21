@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# create a 2049 long key. in a file  named school , with pass betty
+ssh-keygen -b 4096 -f school -N betty
