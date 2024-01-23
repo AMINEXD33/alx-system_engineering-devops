@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # it seems like the apache server is not running LEMME fix that
+
 sudo service apache2 start
