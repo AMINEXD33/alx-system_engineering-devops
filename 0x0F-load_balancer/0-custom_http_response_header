@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # install nginx
-sudo su
+
 apt-get update -y
 apt-get install nginx -y
 sudo ufw allow 'Nginx HTTP'
@@ -41,7 +41,7 @@ config=\
 "
 
 # now we just overwrite the config file and we're done
-echo "$config" > /etc/sites-enabled/default
+echo "$config" > /etc/nginx/sites-enabled/default
 
 # restart the service when it's all done
 sudo service nginx restart
