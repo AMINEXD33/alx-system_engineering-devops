@@ -4,21 +4,21 @@
 sudo su
 apt-get update -y
 apt-get install nginx -y
+sudo ufw allow 'Nginx HTTP'
+sudo mkdir -p /var/www/html /var/www/error
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
-service nginx start
+#service nginx start
 
 # Configure your Nginx server to redirect any hits to the /redirect_me
 # endpoint to twitter
-sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://twitter.com/jossvega103 permanent;" /etc/nginx/sites-enabled/default
-
-# Configure your Nginx server to redirect any hits to the /redirect_me
-# endpoint to twitter
+sudo chmod -R 755 /var/www
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/page_error_404.html
 sudo sed -i '37i error_page 404 /page_error_404.html;\nlocation = /page_error_404.html {\nroot /usr/share/nginx/html; \ninternal;\n}\n' /etc/nginx/sites-enabled/default
 
 # this is a copy past config from servers-enabled/default
 # ofc iv'e added the custom header here
-config="server {
+config=\
+"server {
         listen 80 default_server;
         listen [::]:80 default_server;
 
@@ -41,7 +41,6 @@ config="server {
 "
 
 # now we just overwrite the config file and we're done
-
 echo "$config" > /etc/sites-enabled/default
 
 # restart the service when it's all done
