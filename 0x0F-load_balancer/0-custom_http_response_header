@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+# install nginx
+sudo su
+apt-get update -y
+apt-get install nginx -y
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+service nginx start
+
+# Configure your Nginx server to redirect any hits to the /redirect_me
+# endpoint to twitter
+sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://twitter.com/jossvega103 permanent;" /etc/nginx/sites-enabled/default
+
+# Configure your Nginx server to redirect any hits to the /redirect_me
+# endpoint to twitter
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/page_error_404.html
+sudo sed -i '37i error_page 404 /page_error_404.html;\nlocation = /page_error_404.html {\nroot /usr/share/nginx/html; \ninternal;\n}\n' /etc/nginx/sites-enabled/default
+
+# this is a copy past config from servers-enabled/default
+# ofc iv'e added the custom header here
+config="server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /var/www/html;
+
+        # host name
+        add_header X-Served-By \$hostname;
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+
+}
+"
+
+# now we just overwrite the config file and we're done
+
+echo "$config" > /etc/sites-enabled/default
+
+# restart the service when it's all done
+sudo service nginx restart
