@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # configure the server the exact same way as the first one
 
+sudo su
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
