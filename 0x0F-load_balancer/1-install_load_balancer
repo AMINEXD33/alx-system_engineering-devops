@@ -7,16 +7,13 @@ sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
 sudo apt-get -y install haproxy=2.0.\*
 
 
-options=\
-"bind :80
-        mode http
-        use_backend mybackend
-backend mybackend
-        balance roundrobin
+options="bind :80\n\mode http\n\use_backend mybackend\n\backend mybackend
+   balance roundrobin
         server 971-web-01 54.242.176.4:80 check
         server 971-web-02 54.162.88.196:80 check
 "
+options="\n\tbind :80\n\tmode http\n\tuse_backend mybackend\nbackend mybackend\n\tbalance roundrobin\n\tserver 971-web-01 54.242.176.4:80 check\n\tserver 971-web-01 54.242.176.4:80check"
 
-sed -i '/errorfile 504/a frontend myconf' /etc/haproxy/haproxy.cfg
-sed -i "s/frontend myconf/&$options/g" /etc/haproxy/haproxy.cfg
+sudo sed -i '/errorfile 504/a frontend myconf' /etc/haproxy/haproxy.cfg
+sudo sed -i "s/frontend myconf/&$options/g" /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
