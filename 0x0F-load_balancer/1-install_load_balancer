@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# install and configure a load balancer
 sudo apt-get -y update
 sudo apt-get -y install haproxy=2.0.\*
 sudo apt-get -y install --no-install-recommends software-properties-common
