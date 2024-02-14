@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Dumbs all databases into a tar file
 password=$1
 sudo mysqldump --all-databases -u root --password="$password" > backup.sql
