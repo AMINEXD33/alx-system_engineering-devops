@@ -53,7 +53,7 @@ def driver():
     # get count of done tasks
     titles = count_done_tasks(todos)
 
-    print(f"Employee {user.get('name')}", end="") 
+    print(f"Employee {user.get('name')}", end="")
     print(f"is done with tasks({len(titles)}/{len(todos)}):")
     for done_task in titles:
         print(f"\t {done_task}")
