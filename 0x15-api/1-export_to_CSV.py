@@ -37,7 +37,7 @@ def driver():
     except Exception:
         return
     todos, user = get_user_data(argv[1])
-    with open('USER_ID.csv', 'w', newline='') as csvfile:
+    with open('{id}.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile,
                             delimiter=',',
                             quotechar='|',
