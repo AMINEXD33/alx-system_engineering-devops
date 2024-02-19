@@ -43,11 +43,11 @@ def driver():
     """
     # arg validation
     if len(argv) != 2:
-        return None
+        return
     try:
         id = int(argv[1])
     except Exception:
-        return None
+        return
     # get data
     todos, user = get_user_data(id)
     # get count of done tasks
