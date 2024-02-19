@@ -2,6 +2,9 @@
 import json
 import requests
 from sys import argv
+"""module that get's the todo list of a user and displayes
+   the completed task and it's name
+"""
 
 
 def count_done_tasks(tasks):
