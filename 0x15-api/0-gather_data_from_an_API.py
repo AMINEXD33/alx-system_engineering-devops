@@ -10,8 +10,8 @@ def count_done_tasks(tasks):
     """
     completed_tasks = []
     for val in tasks:
-        if val["completed"] is True:
-            completed_tasks.append(val["title"])
+        if val.get("completed") is True:
+            completed_tasks.append(val.get("title"))
     return completed_tasks
 
 
@@ -21,8 +21,8 @@ def get_user_data(id):
     @id: the user id
     """
     # get the todos
-    req1 = requests.get(f"https://jsonplaceholder.\
-    typicode.com/users/{id}/todos/")
+    request_url = f"https://jsonplaceholder.typicode.com/users/{id}/todos/"
+    req1 = requests.get(request_url)
     todos = json.loads(req1.text)
 
     # get user data
@@ -47,7 +47,7 @@ def driver():
     # get count of done tasks
     titles = count_done_tasks(todos)
     #
-    print(f"Employee {user['name']} \
+    print(f"Employee {user.get('name')} \
     is done with tasks({len(titles)}/{len(todos)}):")
     for done_task in titles:
         print(f"\t {done_task}")
