@@ -10,6 +10,7 @@ from sys import argv
 def count_done_tasks(tasks):
     """count_done_tasks
     counts the already done tasks in a dict
+    @tasks: the tasks dict
     """
     completed_tasks = []
     for val in tasks:
