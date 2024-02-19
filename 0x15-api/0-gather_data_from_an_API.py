@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-import json
-import requests
-from sys import argv
 """module that get's the todo list of a user and displayes
    the completed task and it's name
 """
+
+
+import json
+import requests
+from sys import argv
 
 
 def count_done_tasks(tasks):
@@ -57,4 +59,5 @@ def driver():
         print(f"\t {done_task}")
 
 
-driver()
+if __name__ == "__main__":
+    driver()
